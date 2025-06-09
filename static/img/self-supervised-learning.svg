@@ -1,0 +1,165 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Professional gradients -->
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="neuronGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <radialGradient id="dataGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </radialGradient>
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="150" cy="150" r="140" fill="url(#brainGradient)" opacity="0.1"/>
+  
+  <!-- Neural network structure -->
+  <!-- Input layer (satellite data) -->
+  <g id="inputLayer">
+    <circle cx="50" cy="100" r="8" fill="url(#dataGradient)"/>
+    <circle cx="50" cy="130" r="8" fill="url(#dataGradient)"/>
+    <circle cx="50" cy="160" r="8" fill="url(#dataGradient)"/>
+    <circle cx="50" cy="190" r="8" fill="url(#dataGradient)"/>
+    <circle cx="50" cy="220" r="8" fill="url(#dataGradient)"/>
+    <!-- Satellite icons -->
+    <g transform="translate(35,85)">
+      <rect x="-4" y="-2" width="8" height="4" fill="#4da3d9" rx="1"/>
+      <rect x="-6" y="-1" width="2" height="2" fill="#059669"/>
+      <rect x="4" y="-1" width="2" height="2" fill="#059669"/>
+    </g>
+    <text x="20" y="105" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">MODIS</text>
+    <text x="15" y="135" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">Landsat</text>
+    <text x="10" y="165" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">Sentinel</text>
+    <text x="20" y="195" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">VIIRS</text>
+    <text x="20" y="225" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">GOES</text>
+  </g>
+  
+  <!-- Hidden layers (self-supervised learning) -->
+  <g id="hiddenLayer1">
+    <circle cx="120" cy="80" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="110" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="140" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="170" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="200" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="230" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g id="hiddenLayer2">
+    <circle cx="180" cy="90" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="120" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="150" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="180" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="210" r="6" fill="url(#neuronGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="6;8;6" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Output layer (environmental detections) -->
+  <g id="outputLayer">
+    <circle cx="250" cy="120" r="8" fill="url(#dataGradient)"/>
+    <circle cx="250" cy="160" r="8" fill="url(#dataGradient)"/>
+    <circle cx="250" cy="200" r="8" fill="url(#dataGradient)"/>
+    <!-- Output labels -->
+    <text x="265" y="125" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">Fire Detection</text>
+    <text x="265" y="165" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">Water Quality</text>
+    <text x="265" y="205" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">Land Change</text>
+  </g>
+  
+  <!-- Connection lines with animation -->
+  <g id="connections" stroke="#2563eb" stroke-width="1" opacity="0.6">
+    <!-- Input to hidden layer 1 -->
+    <line x1="58" y1="100" x2="112" y2="80">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="58" y1="130" x2="112" y2="110">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="58" y1="160" x2="112" y2="140">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="58" y1="190" x2="112" y2="170">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Hidden layer 1 to hidden layer 2 -->
+    <line x1="126" y1="80" x2="174" y2="90">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="126" y1="110" x2="174" y2="120">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="126" y1="140" x2="174" y2="150">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Hidden layer 2 to output -->
+    <line x1="186" y1="120" x2="242" y2="120">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="186" y1="150" x2="242" y2="160">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="2.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="186" y1="180" x2="242" y2="200">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Self-supervised learning indicators -->
+  <g id="selfSupervised">
+    <!-- Feedback loop -->
+    <path d="M 200 60 Q 230 40 260 60 Q 280 80 260 100 Q 230 120 200 100" 
+          stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="5 5" opacity="0.8">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="195,95 200,100 195,105" fill="#f59e0b"/>
+    
+    <text x="220" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">
+      Self-Supervised
+    </text>
+    <text x="220" y="35" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle">
+      No Labels Required
+    </text>
+  </g>
+  
+  <!-- Title and description -->
+  <text x="150" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    Self-Supervised Learning
+  </text>
+  <text x="150" y="280" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+    Learns from unlabeled satellite imagery
+  </text>
+</svg>

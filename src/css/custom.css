@@ -1,0 +1,417 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* SIT-FUSE premium color palette */
+:root {
+  /* Premium earth observation color scheme */
+  --ifm-color-primary: #0f4b82;
+  --ifm-color-primary-dark: #0d4373;
+  --ifm-color-primary-darker: #0b3c64;
+  --ifm-color-primary-darkest: #093556;
+  --ifm-color-primary-light: #1155a0;
+  --ifm-color-primary-lighter: #1e6bb8;
+  --ifm-color-primary-lightest: #3b82d6;
+  
+  /* Professional secondary colors with warmth */
+  --ifm-color-secondary: #525f73;
+  --ifm-color-secondary-dark: #3e4a5c;
+  --ifm-color-secondary-darker: #2a3544;
+  --ifm-color-secondary-darkest: #1a202c;
+  --ifm-color-secondary-light: #6b7a8f;
+  --ifm-color-secondary-lighter: #8795aa;
+  --ifm-color-secondary-lightest: #e8ecf2;
+  
+  /* Premium code styling */
+  --ifm-code-font-size: 95%;
+  --ifm-code-background: #f7fafc;
+  --ifm-code-border-radius: 6px;
+  --ifm-code-padding-horizontal: 0.5rem;
+  --ifm-code-padding-vertical: 0.25rem;
+  
+  /* Enhanced code block styling */
+  --docusaurus-highlighted-code-line-bg: rgba(15, 75, 130, 0.08);
+  --ifm-pre-background: #f7fafc;
+  --ifm-pre-border-radius: 10px;
+  --ifm-pre-padding: 1.75rem;
+  --ifm-pre-border: 1px solid var(--ifm-color-emphasis-200);
+  
+  /* Premium spacing */
+  --ifm-spacing-horizontal: 1.75rem;
+  --ifm-global-spacing: 1.75rem;
+  
+  /* Premium typography */
+  --ifm-heading-font-weight: 700;
+  --ifm-h1-font-size: 2.75rem;
+  --ifm-h2-font-size: 2.25rem;
+  --ifm-h3-font-size: 1.625rem;
+  --ifm-font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ifm-heading-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Premium status colors */
+  --ifm-color-warning: #d97706;
+  --ifm-color-danger: #dc2626;
+  --ifm-color-success: #047857;
+  --ifm-color-info: #0369a1;
+  
+  /* Premium neutral palette */
+  --ifm-color-emphasis-100: #f7fafc;
+  --ifm-color-emphasis-200: #edf2f7;
+  --ifm-color-emphasis-300: #e2e8f0;
+  --ifm-color-emphasis-400: #cbd5e0;
+  --ifm-color-emphasis-500: #a0aec0;
+  --ifm-color-emphasis-600: #718096;
+  --ifm-color-emphasis-700: #4a5568;
+  --ifm-color-emphasis-800: #2d3748;
+  --ifm-color-emphasis-900: #1a202c;
+  
+  /* Background colors */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f7fafc;
+}
+
+/* Premium dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #4299e1;
+  --ifm-color-primary-dark: #3182ce;
+  --ifm-color-primary-darker: #2b77cb;
+  --ifm-color-primary-darkest: #2a69ac;
+  --ifm-color-primary-light: #63b3ed;
+  --ifm-color-primary-lighter: #7cc7f0;
+  --ifm-color-primary-lightest: #bee3f8;
+  
+  /* Premium dark backgrounds */
+  --ifm-background-color: #1a202c;
+  --ifm-background-surface-color: #2d3748;
+  
+  /* Dark mode code styling */
+  --ifm-code-background: #4a5568;
+  --ifm-pre-background: #2d3748;
+  --ifm-pre-border: 1px solid var(--ifm-color-emphasis-300);
+  --docusaurus-highlighted-code-line-bg: rgba(66, 153, 225, 0.15);
+  
+  /* Dark mode feature section */
+  .features {
+    background: linear-gradient(180deg, #1a202c 0%, #2d3748 100%);
+  }
+  
+  .features .text--center {
+    background: #2d3748;
+    border-color: rgba(66, 153, 225, 0.2);
+  }
+  
+  /* Dark mode neutral adjustments */
+  --ifm-color-emphasis-100: #2d3748;
+  --ifm-color-emphasis-200: #4a5568;
+  --ifm-color-emphasis-300: #718096;
+  --ifm-color-emphasis-400: #a0aec0;
+}
+
+/* Premium hero section styling */
+.hero--primary {
+  background: linear-gradient(135deg, #093556 0%, #0f4b82 30%, #1155a0 70%, #1e6bb8 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 25% 75%, rgba(30, 107, 184, 0.4) 0%, transparent 60%),
+              radial-gradient(circle at 75% 25%, rgba(59, 130, 214, 0.3) 0%, transparent 60%),
+              linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero--primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero__subtitle {
+  font-size: 1.375rem;
+  font-weight: 400;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+}
+
+/* Professional button styling */
+.button--secondary {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-weight: 600;
+  margin: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.button--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.button--outline {
+  margin: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.button--outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature cards enhancement */
+.row .col {
+  margin-bottom: 2rem;
+}
+
+.text--center h3 {
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+/* Feature SVG styling */
+.featureSvg {
+  height: 350px;
+  width: 350px;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(30, 96, 145, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border: 1px solid rgba(30, 96, 145, 0.1);
+}
+
+.featureSvg:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(30, 96, 145, 0.2);
+}
+
+/* Feature section improvements */
+.features {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #fafbfc 0%, #f8fafc 100%);
+}
+
+.features .container {
+  max-width: 1400px;
+}
+
+/* Feature cards styling */
+.features .col {
+  padding: 2rem 1rem;
+}
+
+.features .text--center {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(30, 96, 145, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(30, 96, 145, 0.05);
+}
+
+.features .text--center:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(30, 96, 145, 0.12);
+}
+
+/* Responsive feature images */
+@media (max-width: 996px) {
+  .featureSvg {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featureSvg {
+    height: 280px;
+    width: 280px;
+  }
+  
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .features .text--center {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .featureSvg {
+    height: 250px;
+    width: 250px;
+  }
+  
+  .features .col {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Code block enhancements */
+.prism-code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Custom admonitions for environmental alerts */
+.alert--warning {
+  border-left: 4px solid var(--ifm-color-warning);
+}
+
+.alert--danger {
+  border-left: 4px solid var(--ifm-color-danger);
+}
+
+.alert--info {
+  border-left: 4px solid var(--ifm-color-info);
+}
+
+.alert--success {
+  border-left: 4px solid var(--ifm-color-success);
+}
+
+/* Table styling improvements */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+table th {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--ifm-table-border-color);
+}
+
+/* Navbar enhancements */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Footer styling */
+.footer--dark {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.footer__link-item {
+  color: #a0aec0;
+  transition: color 0.3s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-lighter);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .button--lg {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(15, 75, 130, 0.1);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Dark mode mermaid adjustments */
+[data-theme='dark'] .mermaid svg {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-color-emphasis-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary-dark);
+}

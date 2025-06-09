@@ -1,0 +1,183 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for different sensors -->
+    <linearGradient id="opticalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="thermalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="radarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="fusionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <!-- Earth gradient -->
+    <radialGradient id="earthBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.05"/>
+    </radialGradient>
+    <!-- Pulse effect -->
+    <filter id="pulse">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Earth -->
+  <circle cx="150" cy="150" r="130" fill="url(#earthBg)"/>
+  
+  <!-- Central Earth -->
+  <circle cx="150" cy="150" r="50" fill="url(#fusionGradient)" opacity="0.8"/>
+  <circle cx="150" cy="150" r="40" fill="none" stroke="#297bbe" stroke-width="2" stroke-dasharray="5 5">
+    <animateTransform attributeName="transform" type="rotate" values="0 150 150;360 150 150" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Landmasses on Earth -->
+  <path d="M130 140c5-3 12-1 16 1s10 7 14 5c4-2 5-6 9-5s6 5 2 8c-3 4-7 5-10 2s-9-2-13 1c-5 4-8 8-12 7s-7-5-4-8c1-3 2-6-1-7s-6 0-1-4z" fill="#4da3d9" opacity="0.9"/>
+  
+  <!-- Satellite orbits -->
+  <circle cx="150" cy="150" r="80" stroke="#4da3d9" stroke-width="1" stroke-dasharray="3 3" fill="none" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" values="0 150 150;360 150 150" dur="15s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="150" r="110" stroke="#4da3d9" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.4">
+    <animateTransform attributeName="transform" type="rotate" values="360 150 150;0 150 150" dur="25s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Optical Satellites (Landsat, Sentinel-2) -->
+  <g id="opticalSats">
+    <g transform="translate(80,80)">
+      <rect x="-8" y="-4" width="16" height="8" fill="url(#opticalGradient)" rx="2"/>
+      <rect x="-12" y="-2" width="4" height="4" fill="#10b981" rx="1"/>
+      <rect x="8" y="-2" width="4" height="4" fill="#10b981" rx="1"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+      <text x="0" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#059669" text-anchor="middle" font-weight="bold">OPTICAL</text>
+      <text x="0" y="-10" font-family="Arial, sans-serif" font-size="8" fill="#059669" text-anchor="middle">Landsat • Sentinel-2</text>
+      <animateTransform attributeName="transform" type="rotate" values="0 150 150;360 150 150" dur="12s" repeatCount="indefinite"/>
+    </g>
+    
+    <g transform="translate(220,220)">
+      <rect x="-8" y="-4" width="16" height="8" fill="url(#opticalGradient)" rx="2"/>
+      <rect x="-12" y="-2" width="4" height="4" fill="#10b981" rx="1"/>
+      <rect x="8" y="-2" width="4" height="4" fill="#10b981" rx="1"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+      <animateTransform attributeName="transform" type="rotate" values="180 150 150;540 150 150" dur="12s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  
+  <!-- Thermal Satellites (MODIS, VIIRS) -->
+  <g id="thermalSats">
+    <g transform="translate(220,80)">
+      <rect x="-8" y="-4" width="16" height="8" fill="url(#thermalGradient)" rx="2"/>
+      <rect x="-12" y="-2" width="4" height="4" fill="#f87171" rx="1"/>
+      <rect x="8" y="-2" width="4" height="4" fill="#f87171" rx="1"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+      <text x="0" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="bold">THERMAL</text>
+      <text x="0" y="-10" font-family="Arial, sans-serif" font-size="8" fill="#dc2626" text-anchor="middle">MODIS • VIIRS</text>
+      <animateTransform attributeName="transform" type="rotate" values="90 150 150;450 150 150" dur="18s" repeatCount="indefinite"/>
+    </g>
+    
+    <g transform="translate(80,220)">
+      <rect x="-8" y="-4" width="16" height="8" fill="url(#thermalGradient)" rx="2"/>
+      <rect x="-12" y="-2" width="4" height="4" fill="#f87171" rx="1"/>
+      <rect x="8" y="-2" width="4" height="4" fill="#f87171" rx="1"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+      <animateTransform attributeName="transform" type="rotate" values="270 150 150;630 150 150" dur="18s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  
+  <!-- Radar Satellites (Sentinel-1) -->
+  <g id="radarSats">
+    <g transform="translate(150,40)">
+      <rect x="-8" y="-4" width="16" height="8" fill="url(#radarGradient)" rx="2"/>
+      <rect x="-12" y="-2" width="4" height="4" fill="#a78bfa" rx="1"/>
+      <rect x="8" y="-2" width="4" height="4" fill="#a78bfa" rx="1"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+      <text x="0" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="bold">RADAR</text>
+      <text x="0" y="-10" font-family="Arial, sans-serif" font-size="8" fill="#7c3aed" text-anchor="middle">Sentinel-1 • ALOS</text>
+      <animateTransform attributeName="transform" type="rotate" values="0 150 150;360 150 150" dur="22s" repeatCount="indefinite"/>
+    </g>
+    
+    <g transform="translate(150,260)">
+      <rect x="-8" y="-4" width="16" height="8" fill="url(#radarGradient)" rx="2"/>
+      <rect x="-12" y="-2" width="4" height="4" fill="#a78bfa" rx="1"/>
+      <rect x="8" y="-2" width="4" height="4" fill="#a78bfa" rx="1"/>
+      <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+      <animateTransform attributeName="transform" type="rotate" values="180 150 150;540 150 150" dur="22s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  
+  <!-- Data streams converging to center -->
+  <g id="dataStreams" opacity="0.7">
+    <!-- Optical data streams -->
+    <path d="M85 85 Q120 120 145 145" stroke="url(#opticalGradient)" stroke-width="3" fill="none" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M215 215 Q180 180 155 155" stroke="url(#opticalGradient)" stroke-width="3" fill="none" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Thermal data streams -->
+    <path d="M215 85 Q180 120 155 145" stroke="url(#thermalGradient)" stroke-width="3" fill="none" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M85 215 Q120 180 145 155" stroke="url(#thermalGradient)" stroke-width="3" fill="none" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Radar data streams -->
+    <path d="M150 45 Q150 95 150 145" stroke="url(#radarGradient)" stroke-width="3" fill="none" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M150 255 Q150 205 150 155" stroke="url(#radarGradient)" stroke-width="3" fill="none" stroke-dasharray="5 5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Fusion core -->
+  <circle cx="150" cy="150" r="15" fill="url(#fusionGradient)" filter="url(#pulse)">
+    <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="150" r="8" fill="#ffffff"/>
+  <text x="150" y="155" font-family="Arial, sans-serif" font-size="8" fill="#1e6091" text-anchor="middle" font-weight="bold">FUSE</text>
+  
+  <!-- Fusion output indicators -->
+  <g id="fusionOutput">
+    <circle cx="130" cy="130" r="3" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="130" r="3" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="170" r="3" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="130" cy="170" r="3" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Enhanced information panel -->
+  <g id="infoPanel" transform="translate(20,20)">
+    <rect x="0" y="0" width="100" height="60" fill="#ffffff" fill-opacity="0.9" stroke="#2563eb" stroke-width="1" rx="5"/>
+    <text x="50" y="15" font-family="Arial, sans-serif" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="bold">MULTI-SENSOR</text>
+    <text x="50" y="27" font-family="Arial, sans-serif" font-size="8" fill="#059669" text-anchor="middle">• Optical: RGB/NIR</text>
+    <text x="50" y="37" font-family="Arial, sans-serif" font-size="8" fill="#dc2626" text-anchor="middle">• Thermal: LWIR</text>
+    <text x="50" y="47" font-family="Arial, sans-serif" font-size="8" fill="#7c3aed" text-anchor="middle">• Radar: SAR</text>
+    <text x="50" y="57" font-family="Arial, sans-serif" font-size="8" fill="#2563eb" text-anchor="middle">→ Unified Analysis</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="150" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    Multi-Sensor Fusion
+  </text>
+</svg>

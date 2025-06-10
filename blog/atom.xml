@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://yunks128.github.io/SIT_FUSE/blog</id>
+    <id>https://yunks128.github.io/SIT-FUSE-site/blog</id>
     <title>SIT-FUSE Blog</title>
     <updated>2024-12-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://yunks128.github.io/SIT_FUSE/blog"/>
+    <link rel="alternate" href="https://yunks128.github.io/SIT-FUSE-site/blog"/>
     <subtitle>SIT-FUSE Blog</subtitle>
-    <icon>https://yunks128.github.io/SIT_FUSE/img/favicon.svg</icon>
+    <icon>https://yunks128.github.io/SIT-FUSE-site/img/favicon.svg</icon>
     <entry>
         <title type="html"><![CDATA[Welcome to SIT-FUSE]]></title>
-        <id>https://yunks128.github.io/SIT_FUSE/blog/welcome-to-sit-fuse</id>
-        <link href="https://yunks128.github.io/SIT_FUSE/blog/welcome-to-sit-fuse"/>
+        <id>https://yunks128.github.io/SIT-FUSE-site/blog/welcome-to-sit-fuse</id>
+        <link href="https://yunks128.github.io/SIT-FUSE-site/blog/welcome-to-sit-fuse"/>
         <updated>2024-12-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We're excited to launch the official website for SIT-FUSE (Segmentation, Instance Tracking, and data Fusion Using multi-SEnsor imagery) - a cutting-edge framework for self-supervised multi-sensor earth observation and environmental monitoring.]]></summary>
         <content type="html"><![CDATA[<p>We're excited to launch the official website for <strong>SIT-FUSE</strong> (Segmentation, Instance Tracking, and data Fusion Using multi-SEnsor imagery) - a cutting-edge framework for self-supervised multi-sensor earth observation and environmental monitoring.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-new">What's New<a href="https://yunks128.github.io/SIT_FUSE/blog/welcome-to-sit-fuse#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-new">What's New<a href="https://yunks128.github.io/SIT-FUSE-site/blog/welcome-to-sit-fuse#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New">​</a></h2>
 <p>This website provides comprehensive resources for researchers, developers, and practitioners interested in using SIT-FUSE for environmental monitoring applications:</p>
 <ul>
 <li>📚 <strong>Complete Documentation</strong> - Installation guides, tutorials, and API reference</li>
@@ -22,22 +22,22 @@
 <li>🌍 <strong>Use Cases</strong> - Real-world applications in environmental monitoring</li>
 <li>👥 <strong>Community Hub</strong> - Connect with other users and contributors</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting Started<a href="https://yunks128.github.io/SIT_FUSE/blog/welcome-to-sit-fuse#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting Started<a href="https://yunks128.github.io/SIT-FUSE-site/blog/welcome-to-sit-fuse#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started">​</a></h2>
 <p>Ready to dive in? Here's how to get started:</p>
 <ol>
-<li><strong><a href="https://yunks128.github.io/SIT_FUSE/docs/installation/setup">Install SIT-FUSE</a></strong> - Follow our comprehensive installation guide</li>
-<li><strong><a href="https://yunks128.github.io/SIT_FUSE/docs/tutorials/wildfire-detection">Try the Wildfire Tutorial</a></strong> - Get hands-on experience with a real example</li>
-<li><strong><a href="https://yunks128.github.io/SIT_FUSE/docs/use-cases/environmental-monitoring">Explore Use Cases</a></strong> - Find applications relevant to your work</li>
-<li><strong><a href="https://yunks128.github.io/SIT_FUSE/docs/community/support">Join the Community</a></strong> - Connect with other users and get support</li>
+<li><strong><a href="https://yunks128.github.io/SIT-FUSE-site/docs/installation/setup">Install SIT-FUSE</a></strong> - Follow our comprehensive installation guide</li>
+<li><strong><a href="https://yunks128.github.io/SIT-FUSE-site/docs/tutorials/wildfire-detection">Try the Wildfire Tutorial</a></strong> - Get hands-on experience with a real example</li>
+<li><strong><a href="https://yunks128.github.io/SIT-FUSE-site/docs/use-cases/environmental-monitoring">Explore Use Cases</a></strong> - Find applications relevant to your work</li>
+<li><strong><a href="https://yunks128.github.io/SIT-FUSE-site/docs/community/support">Join the Community</a></strong> - Connect with other users and get support</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-makes-sit-fuse-special">What Makes SIT-FUSE Special?<a href="https://yunks128.github.io/SIT_FUSE/blog/welcome-to-sit-fuse#what-makes-sit-fuse-special" class="hash-link" aria-label="Direct link to What Makes SIT-FUSE Special?" title="Direct link to What Makes SIT-FUSE Special?">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-makes-sit-fuse-special">What Makes SIT-FUSE Special?<a href="https://yunks128.github.io/SIT-FUSE-site/blog/welcome-to-sit-fuse#what-makes-sit-fuse-special" class="hash-link" aria-label="Direct link to What Makes SIT-FUSE Special?" title="Direct link to What Makes SIT-FUSE Special?">​</a></h2>
 <ul>
 <li><strong>Self-supervised learning</strong> - Minimal manual annotation required</li>
 <li><strong>Multi-sensor integration</strong> - Combines data from different satellite missions</li>
 <li><strong>Proven applications</strong> - Used for wildfire detection, algal bloom monitoring, and more</li>
 <li><strong>Open source</strong> - Available under Apache-2.0 license</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="stay-updated">Stay Updated<a href="https://yunks128.github.io/SIT_FUSE/blog/welcome-to-sit-fuse#stay-updated" class="hash-link" aria-label="Direct link to Stay Updated" title="Direct link to Stay Updated">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="stay-updated">Stay Updated<a href="https://yunks128.github.io/SIT-FUSE-site/blog/welcome-to-sit-fuse#stay-updated" class="hash-link" aria-label="Direct link to Stay Updated" title="Direct link to Stay Updated">​</a></h2>
 <p>Follow our blog for the latest updates, tutorials, and research highlights. We'll be regularly sharing:</p>
 <ul>
 <li>New feature announcements</li>

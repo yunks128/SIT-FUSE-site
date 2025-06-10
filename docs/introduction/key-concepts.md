@@ -10,27 +10,27 @@ Self-supervised learning enables the model to learn meaningful representations f
 ### Self-Supervised Learning Process
 
 ```mermaid
-graph LR
-    subgraph "Input Data"
+flowchart LR
+    subgraph InputData[Input Data]
         Unlabeled[Unlabeled Satellite Images]
         Multi[Multi-temporal Sequences]
         Cross[Cross-sensor Observations]
     end
 
-    subgraph "Pretext Tasks"
+    subgraph PretextTasks[Pretext Tasks]
         Temporal[Temporal Prediction]
         Spatial[Spatial Reconstruction]
         Contrastive[Contrastive Learning]
         Rotation[Rotation Prediction]
     end
 
-    subgraph "Learned Features"
+    subgraph LearnedFeatures[Learned Features]
         Features[Rich Feature Representations]
         Invariant[Invariant Features]
         Semantic[Semantic Understanding]
     end
 
-    subgraph "Downstream Tasks"
+    subgraph DownstreamTasks[Downstream Tasks]
         Detection[Object Detection]
         Classification[Scene Classification]
         Tracking[Temporal Tracking]

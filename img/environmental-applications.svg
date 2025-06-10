@@ -1,0 +1,240 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for different environmental phenomena -->
+    <radialGradient id="fireGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </radialGradient>
+    <radialGradient id="waterGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="50%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </radialGradient>
+    <linearGradient id="forestGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <radialGradient id="cloudGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f3f4f6"/>
+      <stop offset="100%" stop-color="#9ca3af"/>
+    </radialGradient>
+    <linearGradient id="atmosphereGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ddd6fe"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <!-- Earth background -->
+    <radialGradient id="earthBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.05"/>
+    </radialGradient>
+    <!-- Animation filters -->
+    <filter id="fireGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="150" cy="150" r="140" fill="url(#earthBg)"/>
+  
+  <!-- Earth base -->
+  <circle cx="150" cy="150" r="120" fill="#2563eb" opacity="0.2"/>
+  
+  <!-- Wildfire Detection Area -->
+  <g id="wildfireArea" transform="translate(80,80)">
+    <!-- Forest -->
+    <ellipse cx="20" cy="30" rx="35" ry="20" fill="url(#forestGradient)" opacity="0.8"/>
+    <ellipse cx="15" cy="25" rx="20" ry="12" fill="#047857" opacity="0.6"/>
+    
+    <!-- Fire outbreak -->
+    <ellipse cx="25" cy="20" rx="12" ry="8" fill="url(#fireGradient)" filter="url(#fireGlow)">
+      <animate attributeName="rx" values="12;15;12" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Smoke plume -->
+    <ellipse cx="22" cy="10" rx="8" ry="12" fill="url(#cloudGradient)" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-2,-3;0,0" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="25" cy="5" rx="6" ry="8" fill="url(#cloudGradient)" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-3,-2;0,0" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Detection indicator -->
+    <circle cx="25" cy="20" r="18" stroke="#dc2626" stroke-width="2" fill="none" stroke-dasharray="5 5" opacity="0.8">
+      <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <text x="20" y="55" font-family="Arial, sans-serif" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="bold">
+      🔥 Fire Detected
+    </text>
+  </g>
+  
+  <!-- Algal Bloom Detection -->
+  <g id="algalBloomArea" transform="translate(180,80)">
+    <!-- Water body -->
+    <ellipse cx="20" cy="25" rx="30" ry="20" fill="url(#waterGradient)" opacity="0.8"/>
+    
+    <!-- Algal bloom -->
+    <ellipse cx="18" cy="22" rx="15" ry="10" fill="#22c55e" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="22" cy="25" rx="10" ry="8" fill="#16a34a" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Water quality indicators -->
+    <circle cx="12" cy="18" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="28" cy="28" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="32" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Detection boundary -->
+    <ellipse cx="20" cy="25" rx="35" ry="25" stroke="#0ea5e9" stroke-width="2" fill="none" stroke-dasharray="3 3" opacity="0.8">
+      <animate attributeName="stroke-dashoffset" values="0;6" dur="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <text x="20" y="55" font-family="Arial, sans-serif" font-size="10" fill="#0ea5e9" text-anchor="middle" font-weight="bold">
+      🌊 Bloom Detected
+    </text>
+  </g>
+  
+  <!-- Dust/Volcanic Ash Tracking -->
+  <g id="dustTrackingArea" transform="translate(230,150)">
+    <!-- Dust plume -->
+    <ellipse cx="-10" cy="0" rx="25" ry="15" fill="url(#atmosphereGradient)" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0,0;5,2;0,0" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="-5" cy="-5" rx="20" ry="12" fill="url(#atmosphereGradient)" opacity="0.4">
+      <animateTransform attributeName="transform" type="translate" values="0,0;8,3;0,0" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Trajectory tracking -->
+    <path d="M-30,-10 Q-15,0 0,5 Q15,8 30,12" stroke="#7c3aed" stroke-width="3" fill="none" stroke-dasharray="5 5" opacity="0.8">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Wind direction indicator -->
+    <g transform="translate(-20,-15)">
+      <path d="M0,0 L8,0 M6,-2 L8,0 L6,2" stroke="#7c3aed" stroke-width="2" fill="none"/>
+      <text x="0" y="-8" font-family="Arial, sans-serif" font-size="8" fill="#7c3aed">Wind</text>
+    </g>
+    
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="bold">
+      💨 Plume Tracked
+    </text>
+  </g>
+  
+  <!-- Palm Oil Plantation Detection -->
+  <g id="palmOilArea" transform="translate(60,180)">
+    <!-- Original forest -->
+    <rect x="0" y="0" width="25" height="20" fill="url(#forestGradient)" opacity="0.8" rx="3"/>
+    
+    <!-- Plantation rows -->
+    <g id="plantationRows">
+      <rect x="30" y="2" width="20" height="3" fill="#84cc16" rx="1"/>
+      <rect x="30" y="7" width="20" height="3" fill="#84cc16" rx="1"/>
+      <rect x="30" y="12" width="20" height="3" fill="#84cc16" rx="1"/>
+      <rect x="30" y="17" width="20" height="3" fill="#84cc16" rx="1"/>
+      
+      <!-- Palm trees -->
+      <circle cx="32" cy="3.5" r="1" fill="#22c55e"/>
+      <circle cx="36" cy="3.5" r="1" fill="#22c55e"/>
+      <circle cx="40" cy="3.5" r="1" fill="#22c55e"/>
+      <circle cx="44" cy="3.5" r="1" fill="#22c55e"/>
+      <circle cx="48" cy="3.5" r="1" fill="#22c55e"/>
+    </g>
+    
+    <!-- Change detection -->
+    <rect x="25" y="-2" width="30" height="25" stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="4 4" opacity="0.8">
+      <animate attributeName="stroke-dashoffset" values="0;8" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <text x="25" y="35" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle" font-weight="bold">
+      🌴 Land Use Change
+    </text>
+  </g>
+  
+  <!-- Water Level Monitoring -->
+  <g id="waterLevelArea" transform="translate(150,200)">
+    <!-- Reservoir/lake -->
+    <ellipse cx="0" cy="10" rx="25" ry="15" fill="url(#waterGradient)" opacity="0.8"/>
+    
+    <!-- Water level indicators -->
+    <line x1="-30" y1="5" x2="30" y2="5" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="2 2" opacity="0.8"/>
+    <line x1="-30" y1="10" x2="30" y2="10" stroke="#0ea5e9" stroke-width="2" opacity="1"/>
+    <line x1="-30" y1="15" x2="30" y2="15" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="2 2" opacity="0.8"/>
+    
+    <!-- Measurement points -->
+    <circle cx="-20" cy="10" r="2" fill="#ffffff" stroke="#0ea5e9" stroke-width="1">
+      <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="10" r="2" fill="#ffffff" stroke="#0ea5e9" stroke-width="1">
+      <animate attributeName="r" values="2;3;2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="10" r="2" fill="#ffffff" stroke="#0ea5e9" stroke-width="1">
+      <animate attributeName="r" values="2;3;2" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#0ea5e9" text-anchor="middle" font-weight="bold">
+      📊 Water Level
+    </text>
+  </g>
+  
+  <!-- Central monitoring system -->
+  <g id="centralMonitoring">
+    <circle cx="150" cy="150" r="25" fill="url(#fireGradient)" opacity="0.1"/>
+    <circle cx="150" cy="150" r="15" fill="#1e6091" opacity="0.9"/>
+    <circle cx="150" cy="150" r="8" fill="#ffffff"/>
+    
+    <!-- Satellite dish icon -->
+    <path d="M145,145 Q150,140 155,145 Q150,150 145,145" fill="#1e6091"/>
+    <circle cx="150" cy="150" r="2" fill="#1e6091"/>
+    
+    <!-- Data connections -->
+    <line x1="150" y1="135" x2="105" y2="100" stroke="#1e6091" stroke-width="1" opacity="0.6" stroke-dasharray="2 2">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="165" y1="135" x2="200" y2="100" stroke="#1e6091" stroke-width="1" opacity="0.6" stroke-dasharray="2 2">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="165" y1="165" x2="250" y2="165" stroke="#1e6091" stroke-width="1" opacity="0.6" stroke-dasharray="2 2">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="135" y1="165" x2="85" y2="200" stroke="#1e6091" stroke-width="1" opacity="0.6" stroke-dasharray="2 2">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="165" x2="150" y2="215" stroke="#1e6091" stroke-width="1" opacity="0.6" stroke-dasharray="2 2">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Title and legend -->
+  <text x="150" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    Environmental Applications
+  </text>
+  
+  <g id="legend" transform="translate(10,250)">
+    <rect x="0" y="0" width="280" height="40" fill="#ffffff" fill-opacity="0.9" stroke="#2563eb" stroke-width="1" rx="5"/>
+    <text x="140" y="12" font-family="Arial, sans-serif" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="bold">
+      Real-time Monitoring Capabilities
+    </text>
+    <text x="70" y="25" font-family="Arial, sans-serif" font-size="8" fill="#dc2626" text-anchor="middle">Wildfire Detection</text>
+    <text x="140" y="25" font-family="Arial, sans-serif" font-size="8" fill="#0ea5e9" text-anchor="middle">Water Quality</text>
+    <text x="210" y="25" font-family="Arial, sans-serif" font-size="8" fill="#059669" text-anchor="middle">Land Use Change</text>
+    <text x="70" y="35" font-family="Arial, sans-serif" font-size="8" fill="#7c3aed" text-anchor="middle">Atmospheric Tracking</text>
+    <text x="210" y="35" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b" text-anchor="middle">Resource Monitoring</text>
+  </g>
+</svg>
